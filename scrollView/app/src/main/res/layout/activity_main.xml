@@ -2,100 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="Hi Baldeep"
-            android:textColor="#000000"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="Upcoming events"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:divider="@null"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:reverseLayout="true" />
-
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemBackground="@android:color/white"
+        app:itemIconTint="@android:color/tertiary_text_dark"
+        app:itemTextColor="#FB3453"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteX="117dp" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/bg_white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginLeft="15dp"
-            android:text="Upcoming Task"
-            android:textColor="#000000"
-            android:textSize="30sp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView2"
-            android:layout_width="match_parent"
-            android:layout_height="150dp">
-
-        </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="150dp"
-        android:cropToPadding="false"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/top" />
-
+        tools:layout_editor_absoluteX="117dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
