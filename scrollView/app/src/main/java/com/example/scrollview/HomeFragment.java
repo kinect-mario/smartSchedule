@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        RecyclerView recyclerView = rootView.findViewById(R.id.eventLayout);
+        RecyclerView recyclerView = rootView.findViewById(R.id.events);
 
 
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
@@ -59,9 +59,9 @@ public class HomeFragment extends Fragment {
 
 
         Log.d(TAG, "initRecyclerView: init recyclerview");
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
-
+        recyclerView.setLayoutManager(layoutManager);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), mNames, mImageUrls);
         recyclerView.setAdapter(adapter);
         return rootView;
