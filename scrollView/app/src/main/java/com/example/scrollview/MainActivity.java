@@ -11,9 +11,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -23,14 +25,17 @@ public class MainActivity extends AppCompatActivity {
     MenuItem prevMenuItem;
     ViewPager viewPager;
 
+    //add button
+    FloatingActionButton add ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(MainActivity.this,reminderActivity.class));
 
         viewPager = findViewById(R.id.fragment_container);
+        add = findViewById(R.id.floatingActionButton);
         //bottom navigation
         final BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
@@ -60,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         setupViewPager(viewPager);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,reminderActivity.class));
+            }
+        });
 
     }
 
