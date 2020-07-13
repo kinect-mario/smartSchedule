@@ -1,0 +1,4 @@
+bottom navigation hiding
+submit button reminder activity
+login and registration page 
+task type in reminder activity
