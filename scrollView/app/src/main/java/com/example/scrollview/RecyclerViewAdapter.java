@@ -1,15 +1,12 @@
 package com.example.scrollview;
 
-import android.bluetooth.le.ScanSettings;
 import android.content.Context;
 
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,9 +18,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import static com.example.scrollview.R.drawable.bg_blue;
-import static com.example.scrollview.R.drawable.bg_red;
-import static com.example.scrollview.R.drawable.bg_yellow;
 import static com.example.scrollview.R.drawable.blue;
 import static com.example.scrollview.R.drawable.dark_blue;
 import static com.example.scrollview.R.drawable.orange;

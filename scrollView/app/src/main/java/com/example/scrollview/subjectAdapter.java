@@ -62,6 +62,7 @@ class subjectAdapter extends RecyclerView.Adapter<subjectAdapter.ViewHolder> {
                     TransitionManager.beginDelayedTransition(view, new AutoTransition());
                     layout.setVisibility(View.GONE);
                     button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
                 }
             }
         });
