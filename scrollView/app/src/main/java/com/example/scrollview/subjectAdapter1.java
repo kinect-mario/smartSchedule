@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,24 +17,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.scrollview.modal.Subject;
 
-import java.text.BreakIterator;
-import java.util.ArrayList;
 import java.util.List;
 
-class subjectAdapter extends RecyclerView.Adapter<subjectAdapter.ViewHolder> {
+class subjectAdapter1 extends RecyclerView.Adapter<subjectAdapter.ViewHolder> {
     private Context context;
     private List<Subject> subjects;
 
-    public subjectAdapter(Context context, List<Subject> subjects) {
-     this.context = context;
-     this.subjects =  subjects;
+    public subjectAdapter1 (Context context, List<Subject> subjects) {
+        this.context = context;
+        this.subjects =  subjects;
 
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.subject_item,parent,false);
+    public subjectAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.subject_item1,parent,false);
 
 
         return new subjectAdapter.ViewHolder(view);
@@ -62,7 +61,6 @@ class subjectAdapter extends RecyclerView.Adapter<subjectAdapter.ViewHolder> {
                     TransitionManager.beginDelayedTransition(view, new AutoTransition());
                     layout.setVisibility(View.GONE);
                     button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
-
                 }
             }
         });
@@ -75,24 +73,22 @@ class subjectAdapter extends RecyclerView.Adapter<subjectAdapter.ViewHolder> {
     }
     static class ViewHolder extends RecyclerView.ViewHolder
     {
-
-        public ConstraintLayout expandableView;
-        public TextView name;
-        public TextView code;
-
-        public Button arrowBtn;
-
-        public CardView cardView;
+        private TextView name;
+        private TextView code;
+        private Button arrowBtn;
+        private ConstraintLayout expandableView;
+        private CardView cardView;
+        public TextView attendance;
+        private SeekBar seekBar;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.sub_name);
+
             code = itemView.findViewById(R.id.desc);
             arrowBtn = itemView.findViewById(R.id.arrowBtn);
             expandableView = itemView.findViewById(R.id.expandableView);
             cardView = itemView.findViewById(R.id.cardView);
-
-
-
+            attendance = itemView.findViewById(R.id.textView5);
         }
     }
 
